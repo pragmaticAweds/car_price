@@ -7,3 +7,21 @@ content-type: application/json
   "email": "ajanaku@mail.com", 
   "password":"adell"
 }
+
+###get a user info
+GET  http://localhost:3000/auth/4
+
+
+###get users info by query
+GET  http://localhost:3000/auth?email=ajanaku@mail.com
+
+### delete user info
+Delete http://localhost:3000/auth/3
+
+###update user info
+PATCH http://localhost:3000/auth/4
+content-type: application/json
+
+{
+  "password": "Heyyy"
+}
