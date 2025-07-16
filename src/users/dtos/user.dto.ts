@@ -7,3 +7,7 @@ export class UserDto {
   @Expose()
   email: string;
 }
+
+export class UserSessionDto {
+  userId: number | null;
+}
