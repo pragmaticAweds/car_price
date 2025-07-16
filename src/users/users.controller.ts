@@ -34,12 +34,8 @@ export class UsersController {
 
   @Get('/whoami')
   @UseGuards(AuthGuard)
-  whoAmI(
-    // @Session() session: UserSessionDto
-    @CurrentUser() user: User,
-  ) {
+  whoAmI(@CurrentUser() user: User) {
     return user;
-    // return this.usersService.findOne(session.userId as number);
   }
 
   @Post('/signout')
